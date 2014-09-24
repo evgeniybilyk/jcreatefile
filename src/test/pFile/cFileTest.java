@@ -16,34 +16,6 @@ import static org.junit.Assert.*;
 */ 
 public class cFileTest {
 
-    @Before
-    public void before() throws Exception {
-    }
-
-    @After
-    public void after() throws Exception {
-    }
-
-    /**
-    *
-    * Method: getFname()
-    *
-    */
-    @Test
-    public void testGetFname() throws Exception {
-    //TODO: Test goes here...
-    }
-
-    /**
-    *
-    * Method: setFname(String fname)
-    *
-    */
-    @Test
-    public void testSetFname() throws Exception {
-    //TODO: Test goes here...
-    }
-
     /**
     *
     * Method: createFile()
@@ -54,6 +26,5 @@ public class cFileTest {
         cFile cf = new cFile();
         assertTrue("File didn't create",cf.createFile());
     }
-
 
 } 
