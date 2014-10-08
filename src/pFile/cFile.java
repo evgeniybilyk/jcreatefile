@@ -5,9 +5,11 @@ import java.io.IOException;
 
 public class cFile {
     String fname;
+    String dirname;
 
     public cFile() {
-        this.fname = "newfile.txt";
+        fname = "newfile.txt";
+        dirname = "/home/sites/localhost/www/qwerty";
     }
 
     String getFname() {
@@ -29,5 +31,19 @@ public class cFile {
         }
 
         return fileCreated;
+    }
+
+    public void getListFiles() throws IOException {
+        File myFolder = new File(dirname);
+        File[] files = myFolder.listFiles();
+        for(File tmp_fname: files) {
+            System.out.println(tmp_fname.getName());
+            System.out.println(tmp_fname.getAbsoluteFile());
+            System.out.println(tmp_fname.isDirectory());
+            System.out.println(tmp_fname.isFile());
+            System.out.println(tmp_fname.getCanonicalFile());
+            System.out.println(tmp_fname.getCanonicalPath());
+        }
+        //System.out.println(files);
     }
 }
